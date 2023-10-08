@@ -28,6 +28,13 @@ connection.once("open", () => {
   console.log("MongoDB Connection success!");
 });
 
+//Lakmal ---------
+//Society Router
+const societyRouter = require("./routes/society.js");
+app.use("/society",societyRouter)
+
+
+
 
 app.listen(PORT, () => {
   console.log(`Server is up and running on the port number: ${PORT}`);
