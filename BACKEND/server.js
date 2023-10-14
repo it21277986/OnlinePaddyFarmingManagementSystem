@@ -28,12 +28,18 @@ connection.once("open", () => {
   console.log("MongoDB Connection success!");
 });
 
-//Lakmal ---------
+//Lakmal --------------------------------------------------------------------------
 //Society Router
 const societyRouter = require("./routes/society.js");
 app.use("/society",societyRouter)
 
+//Ticket Router
+const ticketRouter = require("./routes/ticket.js");
+app.use("/ticket",ticketRouter)
 
+//Breakdown Router
+const breakdownRouter = require("./routes/breakdown.js");
+app.use("/breakdown",breakdownRouter)
 
 
 app.listen(PORT, () => {
