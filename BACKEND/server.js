@@ -41,6 +41,21 @@ app.use("/ticket",ticketRouter)
 const breakdownRouter = require("./routes/breakdown.js");
 app.use("/breakdown",breakdownRouter)
 
+//Weenali -------------------------------------------------------------------
+const harvestRouter = require("./routes/Harvests.js");
+app.use("/harvest",harvestRouter);
+
+const farmerbuyingpriceRouter= require("./routes/Farmerbuyingprice.js");
+app.use("/farmerbuyingprice",farmerbuyingpriceRouter);
+
+const ricetypeRouter = require("./routes/Ricetypes.js");
+app.use("/ricetype",ricetypeRouter);
+
+const costDetails = require("./routes/Costdetails.js");
+app.use("/costDetails",costDetails);
+
+
+
 
 app.listen(PORT, () => {
   console.log(`Server is up and running on the port number: ${PORT}`);
