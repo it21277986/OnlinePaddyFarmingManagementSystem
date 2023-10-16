@@ -141,10 +141,6 @@ app.use("/requestPesticide",requestFormRouter);
 const responseRouter = require("./routes/bankSlip.js");
 app.use("/bankPayment",responseRouter);
 
-const loginRouter = require("./routes/login.js");
-app.use("/stafflogin",loginRouter);
-
-
 const pesticideRouter = require("./routes/pesticide.js");
 app.use("/pesticides",pesticideRouter);
 
