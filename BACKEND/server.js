@@ -72,6 +72,7 @@ app.use("/price",priceRouter)
 const customerRoutes = require('./routes/customers');
 app.use('/customer', customerRoutes); 
 
+
 //Thimalka ---------
 //Seed Router
 const seedRouter = require("./routes/Seed.js");
@@ -87,7 +88,16 @@ app.use("/seedreq",seedreqRouter)
 const paddyvarRouter = require("./routes/Paddyvar.js");
 app.use("/paddyvar",paddyvarRouter)
 
+//Kavindu --------------------------------------------------------------------------
+const FertilizerMgtRouter = require("./routes/FertilizerMgt.js");
+app.use("/FertilizerMgt", FertilizerMgtRouter);
 
+const depositSlipRouter = require("./routes/UploadSlip.js");
+app.use("/UploadSlip", depositSlipRouter);
+
+const FertilizerStockRouter = require("./routes/FertilizerStock.js");
+app.use("/FertilizerStock", FertilizerStockRouter);
+app.use("/UpdateRecord", FertilizerStockRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is up and running on the port number: ${PORT}`);
