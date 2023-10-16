@@ -5,9 +5,6 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express();
 require("dotenv").config();
-const Counter = require("./models/Counter");
-const multer=require("multer"); 
-const fs = require('fs')
 
 // Set the port for the server to listen on, using the environment variable or a default value
 const PORT = process.env.PORT || 8070;
@@ -43,39 +40,6 @@ app.use("/ticket",ticketRouter)
 //Breakdown Router
 const breakdownRouter = require("./routes/breakdown.js");
 app.use("/breakdown",breakdownRouter)
-
-//sammani__________________________________________________________________________
-// Initialize the counter if it doesn't exist
-Counter.findOne({ name: "IdCounter" })
-.then((counter) => {
-  if (!counter) {
-    // Create a new counter document if it doesn't exist
-    const newCounter = new Counter({ name: "IdCounter", count: 0 });
-    return newCounter.save();
-  }
-  return null; // No need to return anything if the counter already exists
-})
-.then(() => {
-  console.log("Counter initialized successfully.");
-})
-.catch((err) => {
-  console.error("Error initializing counter:", err);
-});
-
-
-const requestFormRouter = require("./routes/requestForms.js");
-app.use("/requestPesticide",requestFormRouter);
-
-
-const responseRouter = require("./routes/bankSlip.js");
-app.use("/bankPayment",responseRouter);
-
-const loginRouter = require("./routes/login.js");
-app.use("/stafflogin",loginRouter);
-
-
-const pesticideRouter = require("./routes/pesticide.js");
-app.use("/pesticides",pesticideRouter);
 
 
 
