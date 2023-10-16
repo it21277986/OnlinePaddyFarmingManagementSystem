@@ -5,6 +5,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express();
 require("dotenv").config();
+const Counter = require ("./models/Counter");
 
 // Set the port for the server to listen on, using the environment variable or a default value
 const PORT = process.env.PORT || 8070;
