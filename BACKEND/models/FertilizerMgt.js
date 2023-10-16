@@ -1,27 +1,45 @@
 const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
 
-const UploadSlipSchema = new Schema({
-    requestId: {
+
+const distributionSchema = new Schema({
+    nic: {
         type: String,
         required: true
     },
-    bank: {
+    name: {
         type: String,
         required: true
     },
-    branch: {
-        type: String,
-        required: true
-    },amount: {
+    contactNo: {
         type: Number,
         required: true
     },
-    slip: {
-        data: Buffer,
-        contentType: String,
-       }
+    plantedDate: {
+        type: Date,
+        required: true
+    },
+    type: {
+        type: String,
+        required: true
+    },
+    amount: {
+        type: String,
+        required: true
+    },
+    isChecked:{
+        type:Boolean,
+    },
+    totalPrice:{
+        type:String
+    }
 
 });
-const UploadSlip = mongoose.model("UploadSlip",UploadSlipSchema);
-module.exports = UploadSlip;
+
+const distribution = mongoose.model("distribution", distributionSchema);
+
+module.exports = distribution;
+
+
+
