@@ -1,0 +1,40 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.square {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-align: center;
+}
+
+.square table th {
+    background-color: #a4a119;
+    color: white;
+    padding: 5px;
+}
+
+.square table tbody tr:last-child {
+    background-color: #c5a1a1;
+}
+
+.square table td {
+    padding: 5px;
+}
+
+.square h2 {
+    color: rgb(119, 171, 7);
+    font-size: 18px;
+}
+
+.square table {
+    font-size: 12px;
+}
