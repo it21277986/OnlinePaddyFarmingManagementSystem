@@ -54,6 +54,11 @@ app.use("/tender",tenderRouter)
 const priceRouter = require("./routes/price");
 app.use("/price",priceRouter)
 
+//Sachini --------------------------------------------------------------------------
+const customerRoutes = require('./routes/customers');
+app.use('/customer', customerRoutes); 
+
+
 app.listen(PORT, () => {
   console.log(`Server is up and running on the port number: ${PORT}`);
 });
