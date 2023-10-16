@@ -116,6 +116,7 @@ const FertilizerStockRouter = require("./routes/FertilizerStock.js");
 app.use("/FertilizerStock", FertilizerStockRouter);
 app.use("/UpdateRecord", FertilizerStockRouter);
 
+
 app.listen(PORT, () => {
   console.log(`Server is up and running on the port number: ${PORT}`);
 });
