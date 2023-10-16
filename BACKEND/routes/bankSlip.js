@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let BankSlip =require("../models/BankSlip");
+let BankSlip =require("../models/Backslip");
 const multer = require("multer");
 const fs =require('fs')
 
@@ -121,8 +121,9 @@ router.route("/get/:transactionId").get(async (req, res) => {
   
   
   
+
+
   
- 
 
 module.exports = router;
 
