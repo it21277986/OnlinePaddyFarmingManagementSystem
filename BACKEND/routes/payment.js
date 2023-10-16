@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let payment = require("../models/payment");
+let Payment = require("../models/payment");
 const multer = require("multer");
 const fs = require("fs");
 
@@ -15,7 +15,7 @@ const upload = multer({ storage: storage });
 
 router.route("/addDepositSlip").post(upload.single('payemtnSlip'), (req, res) => {
     
-    const newPayment = new payment({
+    const newPayment = new Payment({
         paymentSlip: {
             data: fs.readFileSync(req.file.path),
             contentType: req.file.mimetype
@@ -36,7 +36,7 @@ router.route("/addDepositSlip").post(upload.single('payemtnSlip'), (req, res) =>
 
 router.route("/getDepositSlip").get(async (req, res) => {
     try {
-        const allData = await payment.find();
+        const allData = await Payment.find();
         if (!allData || allData.length === 0) {
             return res.status(404).json({ error: "No data found" });
         }
@@ -49,7 +49,7 @@ router.route("/getDepositSlip").get(async (req, res) => {
 
 router.route("/getDepositSlip/:Did").get(async (req, res) => {
     let paymentSlip = req.params.Did;
-    const slip = await payment.findOne({ _id: paymentSlip }).then((paymentSlip) => {
+    const slip = await Payment.findOne({ _id: paymentSlip }).then((paymentSlip) => {
         res.json(slip) // success
     }).catch((err) => { // unsuccessful
         console.log(err);
@@ -58,7 +58,7 @@ router.route("/getDepositSlip/:Did").get(async (req, res) => {
 router.route("/getSlipByReqId/:farmerId").get(async (req, res) => {
     let farmerId = req.params.farmerId;
     try {
-      const paymentSlip = await payment.findOne({ farmerId: farmerId });
+      const paymentSlip = await Payment.findOne({ farmerId: farmerId });
       
       if (!paymentSlip) {
         return res.status(404).json({ error: "No data found" });
