@@ -41,6 +41,7 @@ app.use("/ticket",ticketRouter)
 const breakdownRouter = require("./routes/breakdown.js");
 app.use("/breakdown",breakdownRouter)
 
+
 //Weenali -------------------------------------------------------------------
 const harvestRouter = require("./routes/Harvests.js");
 app.use("/harvest",harvestRouter);
@@ -54,6 +55,22 @@ app.use("/ricetype",ricetypeRouter);
 const costDetails = require("./routes/Costdetails.js");
 app.use("/costDetails",costDetails);
 
+//Binguni---------------------------------------------------------------------------------------
+//paddymill router
+const paddymillRouter = require("./routes/paddymill");
+app.use("/paddymill",paddymillRouter)
+
+//tender router
+const tenderRouter = require("./routes/tender");
+app.use("/tender",tenderRouter)
+
+//pricefixing router
+const priceRouter = require("./routes/price");
+app.use("/price",priceRouter)
+
+//Sachini --------------------------------------------------------------------------
+const customerRoutes = require('./routes/customers');
+app.use('/customer', customerRoutes); 
 
 
 
