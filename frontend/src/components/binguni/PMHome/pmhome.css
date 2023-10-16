@@ -1,0 +1,113 @@
+.imagebh {
+    
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative; /* Added for proper stacking */
+  }
+
+.contentbh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+
+.contentbh {
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    color: #fff;
+  }
+  
+
+.h1bh{
+    color: #fff;
+    font-size: 100px;
+}
+
+.pbh{
+    color:#fff;
+    font-size: 25px;
+    line-height: 15px;
+}
+
+.buttonbh{
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
+
+.card0-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+.card0bh{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card1bh{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./paddy.jpeg);
+}
+
+.card2bh{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./hand.jpeg);
+}
+
+.card3bh{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./man.jpeg);
+}
+
+.card4bh{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./rice.jpeg);
+}
+
+.card0bh:hover{
+    transform: translateY(-10px);
+}
+
+.h5bh{
+    color: #000;
+    text-shadow: 0 0 5px #999;
+    font-size: 25px;
+}
+
+.card0-pbh{
+    text-shadow: 0 0 15px #000;
+    font-size: 8px;
+}
+
+.middlebh{
+    padding-left: 200px;
+}
+
+.middleinbh{
+    padding-left: 30px;
+}
+.textbh{
+    color: #fffcfc;
+    text-shadow: 0 0 5px #999;
+    font-size: 25px;
+}
