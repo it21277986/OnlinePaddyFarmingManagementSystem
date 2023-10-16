@@ -19,24 +19,10 @@ const customerSchema = new Schema({
         required: true
     },
 
-    /*
-    dob : {
-        type : String,
-        required: true
-    },
-    */
-
     nic : {
         type : String,
         required: true
     },
-
-    /*
-    gender : {
-        type : String,
-        required: true
-    },
-    */
 
     no : {
         type : String,
@@ -62,13 +48,6 @@ const customerSchema = new Schema({
         type : String,
         required: true
     },
-
-    /*
-    confirmPassword : {
-        type : String,
-        required: true
-    },
-    */
 
     landOwnerName : {
         type : String,
@@ -100,12 +79,6 @@ const customerSchema = new Schema({
         required: true
     },
 
-    /*
-    MPACode : {
-        type : String,
-        required: true
-    }
-    */
 
     profileImage: String, 
 })
