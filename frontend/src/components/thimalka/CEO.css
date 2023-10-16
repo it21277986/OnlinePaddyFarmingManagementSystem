@@ -1,0 +1,33 @@
+.app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    margin-bottom: 10px;
+  }
+  
+  .right-container {
+    flex: 1;
+    margin-left: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .selected-button {
+    margin-bottom: 20px;
+  }
+  
+  .bottom-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
