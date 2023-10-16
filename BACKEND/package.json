@@ -10,6 +10,7 @@
   "author": "group 13",
   "license": "ISC",
   "dependencies": {
+    "@react-google-maps/api": "^2.19.2",
     "axios": "^1.5.1",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
