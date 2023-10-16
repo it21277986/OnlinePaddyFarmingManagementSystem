@@ -41,6 +41,23 @@ app.use("/ticket",ticketRouter)
 const breakdownRouter = require("./routes/breakdown.js");
 app.use("/breakdown",breakdownRouter)
 
+//kalpana---------------------------------------------------------------------------
+//Machine registration router
+const machineRegRouter = require ("./routes/machineReg.js");
+app.use("/machineReg", machineRegRouter)
+
+//machine request router
+const machineReqRouter= require("./routes/machineReq.js");
+app.use("/machineReq", machineReqRouter)
+
+//fuel request router
+const fuelReqRouter= require ("./routes/fuelRequest.js");
+app.use("/fuelReq", fuelReqRouter)
+
+//payment router
+const paymentRouter= require("./routes/payment.js");
+app.use("/payment",paymentRouter )
+
 
 //Weenali -------------------------------------------------------------------
 const harvestRouter = require("./routes/Harvests.js");
