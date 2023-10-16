@@ -41,6 +41,9 @@ app.use("/ticket",ticketRouter)
 const breakdownRouter = require("./routes/breakdown.js");
 app.use("/breakdown",breakdownRouter)
 
+//Sachini --------------------------------------------------------------------------
+const customerRoutes = require('./routes/customers');
+app.use('/customer', customerRoutes); 
 
 app.listen(PORT, () => {
   console.log(`Server is up and running on the port number: ${PORT}`);
