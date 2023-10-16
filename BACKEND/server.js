@@ -41,6 +41,18 @@ app.use("/ticket",ticketRouter)
 const breakdownRouter = require("./routes/breakdown.js");
 app.use("/breakdown",breakdownRouter)
 
+//Binguni---------------------------------------------------------------------------------------
+//paddymill router
+const paddymillRouter = require("./routes/paddymill");
+app.use("/paddymill",paddymillRouter)
+
+//tender router
+const tenderRouter = require("./routes/tender");
+app.use("/tender",tenderRouter)
+
+//pricefixing router
+const priceRouter = require("./routes/price");
+app.use("/price",priceRouter)
 
 app.listen(PORT, () => {
   console.log(`Server is up and running on the port number: ${PORT}`);
