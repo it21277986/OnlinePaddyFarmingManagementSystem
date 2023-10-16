@@ -116,6 +116,38 @@ const FertilizerStockRouter = require("./routes/FertilizerStock.js");
 app.use("/FertilizerStock", FertilizerStockRouter);
 app.use("/UpdateRecord", FertilizerStockRouter);
 
+//Sammani ------------------------------------------------------
+// Initialize the counter if it doesn't exist
+Counter.findOne({ name: "IdCounter" })
+.then((counter) => {
+  if (!counter) {
+    // Create a new counter document if it doesn't exist
+    const newCounter = new Counter({ name: "IdCounter", count: 0 });
+    return newCounter.save();
+  }
+  return null; // No need to return anything if the counter already exists
+})
+.then(() => {
+  console.log("Counter initialized successfully.");
+})
+.catch((err) => {
+  console.error("Error initializing counter:", err);
+});
+
+const requestFormRouter = require("./routes/requestForms.js");
+app.use("/requestPesticide",requestFormRouter);
+
+
+const responseRouter = require("./routes/bankSlip.js");
+app.use("/bankPayment",responseRouter);
+
+const loginRouter = require("./routes/login.js");
+app.use("/stafflogin",loginRouter);
+
+
+const pesticideRouter = require("./routes/pesticide.js");
+app.use("/pesticides",pesticideRouter);
+
 
 app.listen(PORT, () => {
   console.log(`Server is up and running on the port number: ${PORT}`);
