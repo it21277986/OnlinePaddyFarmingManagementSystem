@@ -41,6 +41,80 @@ app.use("/ticket",ticketRouter)
 const breakdownRouter = require("./routes/breakdown.js");
 app.use("/breakdown",breakdownRouter)
 
+//kalpana---------------------------------------------------------------------------
+//Machine registration router
+const machineRegRouter = require ("./routes/machineReg.js");
+app.use("/machineReg", machineRegRouter)
+
+//machine request router
+const machineReqRouter= require("./routes/machineReq.js");
+app.use("/machineReq", machineReqRouter)
+
+//fuel request router
+const fuelReqRouter= require ("./routes/fuelRequest.js");
+app.use("/fuelReq", fuelReqRouter)
+
+//payment router
+const paymentRouter= require("./routes/payment.js");
+app.use("/payment",paymentRouter )
+
+
+//Weenali -------------------------------------------------------------------
+const harvestRouter = require("./routes/Harvests.js");
+app.use("/harvest",harvestRouter);
+
+const farmerbuyingpriceRouter= require("./routes/Farmerbuyingprice.js");
+app.use("/farmerbuyingprice",farmerbuyingpriceRouter);
+
+const ricetypeRouter = require("./routes/Ricetypes.js");
+app.use("/ricetype",ricetypeRouter);
+
+const costDetails = require("./routes/Costdetails.js");
+app.use("/costDetails",costDetails);
+
+//Binguni---------------------------------------------------------------------------------------
+//paddymill router
+const paddymillRouter = require("./routes/paddymill");
+app.use("/paddymill",paddymillRouter)
+
+//tender router
+const tenderRouter = require("./routes/tender");
+app.use("/tender",tenderRouter)
+
+//pricefixing router
+const priceRouter = require("./routes/price");
+app.use("/price",priceRouter)
+
+//Sachini --------------------------------------------------------------------------
+const customerRoutes = require('./routes/customers');
+app.use('/customer', customerRoutes); 
+
+
+//Thimalka ---------
+//Seed Router
+const seedRouter = require("./routes/Seed.js");
+app.use("/seed",seedRouter)
+
+//Thimalka ---------
+//Seed Requests Router
+const seedreqRouter = require("./routes/Seedreq.js");
+app.use("/seedreq",seedreqRouter)
+
+//Thimalka ---------
+//Paddy variety Router
+const paddyvarRouter = require("./routes/Paddyvar.js");
+app.use("/paddyvar",paddyvarRouter)
+
+//Kavindu --------------------------------------------------------------------------
+const FertilizerMgtRouter = require("./routes/FertilizerMgt.js");
+app.use("/FertilizerMgt", FertilizerMgtRouter);
+
+const depositSlipRouter = require("./routes/UploadSlip.js");
+app.use("/UploadSlip", depositSlipRouter);
+
+const FertilizerStockRouter = require("./routes/FertilizerStock.js");
+app.use("/FertilizerStock", FertilizerStockRouter);
+app.use("/UpdateRecord", FertilizerStockRouter);
 
 
 app.listen(PORT, () => {
