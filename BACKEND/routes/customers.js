@@ -13,9 +13,9 @@ const mongoose = require('mongoose');
 
 // Configure multer to handle file uploads
 const storage = multer.diskStorage({
-    destination: 'uploads/', // Directory where uploaded images will be stored
+    destination: 'uploads/', 
     filename: (req, file, cb) => {
-      cb(null, Date.now() + path.extname(file.originalname)); // Rename uploaded file with a unique name
+      cb(null, Date.now() + path.extname(file.originalname)); 
     },
   });
   
@@ -41,7 +41,7 @@ const storage = multer.diskStorage({
 
 
 //newly registered one
-router.route("/register").post(async (req, res) => { // Mark this function as async
+router.route("/register").post(async (req, res) => { 
     const fname = req.body.fname;
     const lname = req.body.lname;
     const username = req.body.username;
@@ -61,7 +61,7 @@ router.route("/register").post(async (req, res) => { // Mark this function as as
     const feildSize = req.body.feildSize;
 
     try {
-        const salt = await bcrypt.genSalt(10); // Generate a salt
+        const salt = await bcrypt.genSalt(10); 
         const hashedPassword = await bcrypt.hash(password, salt);
 
         const newCustomer = new Customer({
@@ -228,7 +228,7 @@ router.route("/loginCus").post(async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    // Check if it's an HR login (username: 'HR', password: 'manager')
+    
     if (username === 'HR' && password === 'manager') {
       // Simulate HR login and navigate to HR home page
       return res.status(200).json({ message: `${username} login successfully`, isHR: true });
