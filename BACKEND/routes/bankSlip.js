@@ -63,9 +63,9 @@ router.route("/update/:transactionId").put(async (req, res) => {
 
     // Use findOneAndUpdate correctly with a query to find the document and update data
     const update = await BankSlip.findOneAndUpdate(
-      { transactionId: slipId }, // Query to find the document
-      { Status: updatedStatus }, // Update data
-      { new: true } // To return the updated document
+      { transactionId: slipId }, 
+      { Status: updatedStatus }, 
+      { new: true }
     );
 
     if (!update) {
@@ -106,7 +106,7 @@ router.route("/get/:transactionId").get(async (req, res) => {
   }
 });
  
-  //Delete
+  //Delete funtion
 
    router.route("/delete/:transactionId").delete(async(req,res)=>{
     let transactionId = req.params.transactionId;
