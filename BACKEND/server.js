@@ -72,6 +72,21 @@ app.use("/price",priceRouter)
 const customerRoutes = require('./routes/customers');
 app.use('/customer', customerRoutes); 
 
+//Thimalka ---------
+//Seed Router
+const seedRouter = require("./routes/Seed.js");
+app.use("/seed",seedRouter)
+
+//Thimalka ---------
+//Seed Requests Router
+const seedreqRouter = require("./routes/Seedreq.js");
+app.use("/seedreq",seedreqRouter)
+
+//Thimalka ---------
+//Paddy variety Router
+const paddyvarRouter = require("./routes/Paddyvar.js");
+app.use("/paddyvar",paddyvarRouter)
+
 
 
 app.listen(PORT, () => {
