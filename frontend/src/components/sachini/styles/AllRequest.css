@@ -1,0 +1,119 @@
+/* Style for the entire table */
+.all-requests-table-sachini {
+    width: 70%; 
+    border-collapse: collapse; 
+    margin: 20px auto; 
+    font-family: Arial, sans-serif; 
+    border: 1px solid #ddd; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 100px;
+    font-size: 21px;
+  }
+  
+  /* Style for table headers (th) */
+  .all-requests-table-sachini th {
+    background-color: #97d36f; 
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: left; 
+  }
+  
+  /* Style for table cells (td) */
+  .all-requests-table-sachini td {
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: left; 
+  }
+  
+  /* Add a hover effect for rows */
+  .all-requests-table-sachini tbody tr:hover {
+    background-color: #f5f5f5; 
+  }
+  
+  .all-requests-heading-sachini {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .noreq-sachini {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  /* Highlighted row styles */
+.highlight-sachini {
+    background-color: #e2ec87; 
+    font-weight: bold; 
+  }
+  
+  /*styles for search bar */
+  .search-bar-sachini {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    margin-bottom: 20px; 
+    margin-right: 30px !important;
+  }
+
+  .search-container-sachini {
+    display: flex;
+    align-items: center;
+    /*justify-content: flex-end; /* This will move the content to the right */
+    margin-left: 760px !important;
+    width: 100%;
+  }
+  
+  .reqSearchBar-sachini {
+    padding: 5px;
+    border: 1px solid #3f8f43;
+    border-radius: 5px;
+    margin-right: 0; 
+    font-size: 14px; 
+  }
+  
+  .reqSearchButton-sachini {
+    background-color: #49a765; 
+    color: #fff; 
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; 
+    margin-left: 10px !important;
+  }
+  
+  .reqSearchButton-sachini:hover {
+    background-color: #5daf64; 
+  }
+  
+  .searchPara-sachini{
+    font-size: 17px;
+    margin-right: 5px;
+    margin-top: 20px !important;
+    padding-top: 10px !important;
+  }
+
+  .no-results-message-sachini{
+    margin-top: 30px !important;
+    margin-left: 5px !important;
+  }
+
+  /* Style for the "Download Row PDF" buttons */
+.download-row-button-sachini {
+  background-color: #ff5733; /* Change the background color */
+  color: #fff; /* Change the text color */
+  padding: 0; /* Adjust the padding to change the button size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px; /* Change the font size */
+  margin-left: 1px !important;
+  width: 65px;
+  height: 23px;
+  margin-top: 5px;
+}
+
+.download-row-button-sachini:hover {
+  background-color: #ff704c; /* Change the background color on hover */
+}
