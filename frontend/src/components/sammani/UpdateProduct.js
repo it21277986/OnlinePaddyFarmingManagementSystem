@@ -131,7 +131,7 @@ function UpdateProduct() {
     formData.append("price", e.target.price.value);
 
   
-    // Append the new image if it's selected
+    // append the new image
     
     axios
       .put(`http://localhost:8070/pesticides/updateAll/${pesticideId}`, formData, {
