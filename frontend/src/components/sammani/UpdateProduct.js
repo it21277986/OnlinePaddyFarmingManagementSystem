@@ -305,6 +305,7 @@ function UpdateProduct() {
  <th style={{ fontSize: "18px",color:"black" , border: "1px solid #dddddd", textAlign: "left", padding: "8px" }}>Unit Price</th>
  <td style={{  fontSize: "18px",color:"black" , border: "1px solid #dddddd", textAlign: "left", padding: "8px"  }}><Input style={{color:"black",width:"250px"}} name="price" defaultValue={product.price} type="text"></Input></td>
 </tr>
+
 <br></br>
 <tr>
 
