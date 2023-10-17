@@ -12,7 +12,7 @@ export default function AddPrice() {
     const profit = 0.25; // Set profit as a constant
     const [total, setTotal] = useState(0);
     const [tenders, setTenders] = useState([]);
-    // Function to calculate the total
+    
     const calculateTotal = () => {
         const totalPrice = paddyPrice + pmCost + transport;
         const totalAfterWastage = totalPrice - (totalPrice * wastage); // Subtract wastage
