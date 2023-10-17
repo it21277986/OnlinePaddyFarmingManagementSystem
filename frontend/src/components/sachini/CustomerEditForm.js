@@ -52,13 +52,13 @@ const handleInputChange = (e) => {
           if (response.status === 200) {
             // Customer updated successfully
             alert('Customer updated successfully');
-            // You can also redirect to the customer list page here
+            
             navigate('/customer-list');
           }
         })
         .catch((error) => {
           console.error('Error updating customer', error);
-          // Handle any errors and show an alert or message to the user
+          
           alert('Error updating customer');
         });
     } else {
@@ -124,8 +124,6 @@ const handleInputChange = (e) => {
           delete errors[fieldName];
         }
         break;
-  
-      // Add validation cases for other fields as needed
   
       default:
         break;
@@ -235,12 +233,12 @@ const handleInputChange = (e) => {
                   // Allow alphanumeric characters only
                   if (
                     !(
-                      (charCode >= 65 && charCode <= 90) || // Uppercase letters (A-Z)
-                      (charCode >= 97 && charCode <= 122) || // Lowercase letters (a-z)
-                      (charCode >= 48 && charCode <= 57) // Numbers (0-9)
+                      (charCode >= 65 && charCode <= 90) || 
+                      (charCode >= 97 && charCode <= 122) || 
+                      (charCode >= 48 && charCode <= 57) 
                     )
                   ) {
-                    e.preventDefault(); // Prevent entering special characters
+                    e.preventDefault(); 
                   }
                 }}
                 onChange={handleInputChange}
@@ -260,9 +258,9 @@ const handleInputChange = (e) => {
                   const currentValue = e.target.value;
           
                   if (currentValue.length === 0 && charCode !== 48) {
-                    e.preventDefault(); // Prevent entering anything other than '0' as the first character
+                    e.preventDefault(); 
                   } else if (currentValue.length > 0 && (charCode < 48 || charCode > 57)) {
-                    e.preventDefault(); // Prevent entering non-numeric characters
+                    e.preventDefault(); 
                   }
                 }}
                 onChange={(e) => {
@@ -375,10 +373,10 @@ const handleInputChange = (e) => {
                 const charCode = e.charCode;
                 if (
                   !(
-                    (charCode >= 65 && charCode <= 90) || // Uppercase letters (A-Z)
-                    (charCode >= 97 && charCode <= 122) || // Lowercase letters (a-z)
-                    (charCode >= 48 && charCode <= 57) || // Numbers (0-9)
-                    charCode === 32 // Space
+                    (charCode >= 65 && charCode <= 90) || 
+                    (charCode >= 97 && charCode <= 122) || 
+                    (charCode >= 48 && charCode <= 57) || 
+                    charCode === 32 
                   )
                 ) {
                   e.preventDefault();
@@ -387,7 +385,6 @@ const handleInputChange = (e) => {
             />
             </td>
           </tr>
-          {/* Add more rows for other fields */}
         </tbody>
       </table>
       
