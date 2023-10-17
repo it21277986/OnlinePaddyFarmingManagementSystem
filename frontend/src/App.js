@@ -45,6 +45,9 @@ function App() {
            <Route path='/updateproduct/:pesticideId' element={<UpdateProduct/>}/>
 
         </Routes>
+        
+         {/* Footer */}
+         <Footer/>
       
     </div>
     </Router>
