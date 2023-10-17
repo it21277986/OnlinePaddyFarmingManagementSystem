@@ -37,55 +37,6 @@ function AllRequests() {
       });
   }, [nic]);
 
-  
-
-/*
-
-  const filterRequestsByDate = () => {
-    const matchingRows = mergedData.filter((data) => {
-      if (!data.requestedDate) {
-        // Handle the case where requestedDate is undefined
-        return false;
-      }
-  
-      const searchDateObj = new Date(searchDate);
-      const requestedDateParts = data.requestedDate.split('/'); // Replace '/' with your date separator
-  
-      if (requestedDateParts.length !== 3) {
-        // Handle invalid date format, e.g., if it doesn't split into three parts
-        return false;
-      }
-  
-      const requestedDateObj = new Date(
-        Number(requestedDateParts[2]), // Year
-        Number(requestedDateParts[1]) - 1, // Month (subtract 1 since months are 0-indexed)
-        Number(requestedDateParts[0]) // Day
-      );
-  
-      // Debug log to check dates
-      console.log('Search Date:', searchDateObj);
-      console.log('Requested Date:', requestedDateObj);
-  
-      return (
-        searchDateObj.getDate() === requestedDateObj.getDate() &&
-        searchDateObj.getMonth() === requestedDateObj.getMonth() &&
-        searchDateObj.getFullYear() === requestedDateObj.getFullYear()
-      );
-    });
-  
-    // Debug log to check matching rows
-    console.log('Matching Rows:', matchingRows);
-  
-    if (matchingRows.length === 0) {
-      setHighlightedRows([]);
-      setNoResultsMessage('No results');
-    } else {
-      setHighlightedRows(matchingRows);
-      setNoResultsMessage('');
-    }
-  };
-  */
-  
 
   const filterRequestsByDate = () => {
     const matchingRows = mergedData.filter((data) => {
@@ -129,166 +80,40 @@ function AllRequests() {
     }
   };
   
-  
-
-  
-  
-  
-/*
-  const downloadRequestFormAsPDF = () => {
-    if (!Array.isArray(mergedData)) {
-      return;
-    }
-    // Create a new jsPDF instance
-    const doc = new jsPDF();
-  
-    // Add your logo without resizing it
-    doc.addImage(logoImage, 'PNG', 10, 10, 40, 40); // Adjust the coordinates and dimensions as needed
-  
-    // Calculate the X-coordinate for the site name to be positioned to the right of the logo
-    const logoWidth = 40; // Adjust the width of the logo if needed
-    const siteNameX = 10 + logoWidth + 10; // Adjust the spacing as needed
-  
-    // Calculate the Y-coordinate for the site name to be at the same vertical position as the logo
-    const siteNameY = 10 + 40 / 2; // Assuming the logo is centered vertically
-  
-    // Add the site name text to the PDF
-    doc.setFontSize(16); // Adjust the font size as needed
-    doc.setFont('Bowlby One', 'bold'); // Set the font to 'helvetica' and style to 'bold'
-    doc.text(siteName, siteNameX, siteNameY);
-  
-    doc.setFontSize(12); // Reset to default font size
-    doc.setFont('helvetica', 'normal'); // Reset to default font style
-  
-    // Define the text to be centered
-    const text = 'MY REQUESTS';
-  
-    // Calculate the width of the text
-    const textWidth = doc.getStringUnitWidth(text) * doc.internal.getFontSize() / doc.internal.scaleFactor;
-  
-    // Calculate the X-coordinate to center the text
-    const centerX = (doc.internal.pageSize.getWidth() - textWidth) / 2;
-  
-    // Add the centered text to the PDF below the logo and site name
-    doc.text(text, centerX, siteNameY + 30); // Adjust the Y-coordinate for spacing
-  
-    // Define the table headers
-    const headers = [['Request ID', 'Item Name', 'Req Date', 'Quantity', 'Price', 'Status']];
-  
-    // Extract the data from mergedData
-    const data = mergedData.map((row) => [
-      row.requestId || row._id || row._id || row._id,
-      row.productName || row.ricetype || row.type || row.seedtype || row.machineName,
-      row.requestedDate || row.date || row.plantedDate || row.date || row.dateOfRequest,
-      row.quantity || row.cultivatedamount || row.amount || row.reqamount || '1',
-      row.totalPrice || row.totalPrice || row.payableAmount || row.Price || '-',
-      row.status || row.status || row.isChecked ? 'Checked' : 'Pending' || row.status,
-    ]);
-  
-    
-    // Create a table with the headers and data
-    doc.autoTable({
-      head: headers,
-      body: data,
-      startY: siteNameY + 40, // Adjust the starting Y position as needed
-    });
-  
-    // Save the PDF with a specific name
-    doc.save('request_form.pdf');
-  };
-  
-
-    const downloadRowDataAsPDF = (rowData) => {
-  // Create a new jsPDF instance
-  const doc = new jsPDF();
-
-  doc.addImage(logoImage, 'PNG', 10, 10, 40, 40); // Adjust the coordinates and dimensions as needed
-  
-  // Calculate the X-coordinate for the site name to be positioned to the right of the logo
-  const logoWidth = 40; // Adjust the width of the logo if needed
-  const siteNameX = 10 + logoWidth + 10; // Adjust the spacing as needed
-
-  // Calculate the Y-coordinate for the site name to be at the same vertical position as the logo
-  const siteNameY = 10 + 40 / 2; // Assuming the logo is centered vertically
-
-  // Add the site name text to the PDF
-  doc.setFontSize(16); // Adjust the font size as needed
-  doc.setFont('helvetica', 'bold'); // Set the font to 'helvetica' and style to 'bold'
-  doc.text(siteName, siteNameX, siteNameY);
-
-  doc.setFontSize(12); // Reset to default font size
-  doc.setFont('helvetica', 'normal'); // Reset to default font style
-
-  // Define the text to be centered
-  const text = 'MY REQUESTS';
-
-  // Calculate the width of the text
-  const textWidth = doc.getStringUnitWidth(text) * doc.internal.getFontSize() / doc.internal.scaleFactor;
-
-  // Calculate the X-coordinate to center the text
-  const centerX = (doc.internal.pageSize.getWidth() - textWidth) / 2;
-
-  // Add the centered text to the PDF below the logo and site name
-  doc.text(text, centerX, siteNameY + 30); // Adjust the Y-coordinate for spacing
-
-  // Define fields to exclude
-  const excludedFields = ['_id', '__v'];
-
-  Object.keys(rowData).forEach((key, index) => {
-    // Check if the field is not in the excludedFields array
-    if (!excludedFields.includes(key)) {
-      const yPos = 60 + index * 10;
-      doc.text(`${key}: ${rowData[key]}`, 10, yPos);
-    }
-  });
-
-  // Save the PDF with a specific name
-  doc.save('row_data.pdf');
-};
-
-  */
 
 const downloadRequestFormAsPDF = () => {
   if (!Array.isArray(mergedData)) {
     return;
   }
-  // Create a new jsPDF instance
+  
   const doc = new jsPDF();
 
-  // Add your logo without resizing it
-  doc.addImage(logoImage, 'PNG', 10, 10, 40, 40); // Adjust the coordinates and dimensions as needed
+  doc.addImage(logoImage, 'PNG', 10, 10, 40, 40); 
 
-  // Calculate the X-coordinate for the site name to be positioned to the right of the logo
-  const logoWidth = 40; // Adjust the width of the logo if needed
-  const siteNameX = 10 + logoWidth + 10; // Adjust the spacing as needed
 
-  // Calculate the Y-coordinate for the site name to be at the same vertical position as the logo
-  const siteNameY = 10 + 40 / 2; // Assuming the logo is centered vertically
+  const logoWidth = 40; 
+  const siteNameX = 10 + logoWidth + 10; 
 
-  // Add the site name text to the PDF
-  doc.setFontSize(20); // Adjust the font size as needed
-  doc.setFont('Bowlby One', 'bold'); // Set the font to 'helvetica' and style to 'bold'
+ 
+  const siteNameY = 10 + 40 / 2; 
+  
+  doc.setFontSize(20); 
+  doc.setFont('Bowlby One', 'bold'); 
   doc.text(siteName, siteNameX, siteNameY);
 
-  doc.setFontSize(16); // Reset to default font size
-  doc.setFont('helvetica', 'normal'); // Reset to default font style
+  doc.setFontSize(16); 
+  doc.setFont('helvetica', 'normal'); 
 
-  // Define the text to be centered
   const text = 'MY REQUESTS';
-
-  // Calculate the width of the text
+  
   const textWidth = doc.getStringUnitWidth(text) * doc.internal.getFontSize() / doc.internal.scaleFactor;
-
-  // Calculate the X-coordinate to center the text
+  
   const centerX = (doc.internal.pageSize.getWidth() - textWidth) / 2;
+  
+  doc.text(text, centerX, siteNameY + 30); 
 
-  // Add the centered text to the PDF below the logo and site name
-  doc.text(text, centerX, siteNameY + 30); // Adjust the Y-coordinate for spacing
-
-  // Define the table headers
   const headers = [['Item Name', 'Req Date', 'Quantity', 'Price (Rs.)', 'Status']];
 
-  // Extract the data from mergedData
   const data = mergedData.map((row) => [
     /*row.requestId || row._id || row._id || row._id,*/
     row.productName || row.ricetype || row.type || row.seedtype || row.machineName,
@@ -311,14 +136,13 @@ const downloadRequestFormAsPDF = () => {
   ]);
 
   
-  // Create a table with the headers and data
   doc.autoTable({
     head: headers,
     body: data,
-    startY: siteNameY + 40, // Adjust the starting Y position as needed
+    startY: siteNameY + 40, 
   });
 
-  const name = 'Sarathchandra H.M.S.D.'; // Replace with the actual name
+  const name = 'Sarathchandra H.M.S.D.'; 
   const department = 'Agricultural Department'; 
   const no = 'IT21213458';
 
@@ -334,7 +158,6 @@ const downloadRequestFormAsPDF = () => {
   doc.text(`Date: ${formattedDate}`, 20, doc.internal.pageSize.getHeight() - 20);
 
     
-  // Save the PDF with a specific name
   doc.save('request_form.pdf');
 };
 
@@ -346,50 +169,42 @@ const downloadRequestFormAsPDF = () => {
 
 
   const downloadRowDataAsPDF = (rowData) => {
-// Create a new jsPDF instance
+
 const doc = new jsPDF();
 
-doc.addImage(logoImage, 'PNG', 10, 10, 40, 40); // Adjust the coordinates and dimensions as needed
+doc.addImage(logoImage, 'PNG', 10, 10, 40, 40); 
 
-// Calculate the X-coordinate for the site name to be positioned to the right of the logo
-const logoWidth = 40; // Adjust the width of the logo if needed
-const siteNameX = 10 + logoWidth + 10; // Adjust the spacing as needed
+const logoWidth = 40; 
+const siteNameX = 10 + logoWidth + 10; 
 
-// Calculate the Y-coordinate for the site name to be at the same vertical position as the logo
-const siteNameY = 10 + 40 / 2; // Assuming the logo is centered vertically
+const siteNameY = 10 + 40 / 2; 
 
-// Add the site name text to the PDF
-doc.setFontSize(20); // Adjust the font size as needed
-doc.setFont('helvetica', 'bold'); // Set the font to 'helvetica' and style to 'bold'
+doc.setFontSize(20); 
+doc.setFont('helvetica', 'bold'); 
 doc.text(siteName, siteNameX, siteNameY);
 
-doc.setFontSize(16); // Reset to default font size
-doc.setFont('helvetica', 'normal'); // Reset to default font style
+doc.setFontSize(16); 
+doc.setFont('helvetica', 'normal'); 
 
-// Define the text to be centered
 const text = 'MY REQUESTS';
 
-// Calculate the width of the text
 const textWidth = doc.getStringUnitWidth(text) * doc.internal.getFontSize() / doc.internal.scaleFactor;
 
-// Calculate the X-coordinate to center the text
 const centerX = (doc.internal.pageSize.getWidth() - textWidth) / 2;
 
-// Add the centered text to the PDF below the logo and site name
-doc.text(text, centerX, siteNameY + 30); // Adjust the Y-coordinate for spacing
+doc.text(text, centerX, siteNameY + 30); 
 
-// Define fields to exclude
 const excludedFields = ['_id', '__v'];
 
 Object.keys(rowData).forEach((key, index) => {
-  // Check if the field is not in the excludedFields array
+  
   if (!excludedFields.includes(key)) {
     const yPos = 60 + index * 10;
     doc.text(`${key}: ${rowData[key]}`, 10, yPos);
   }
 });
 
-const name = 'Sarathchandra H.M.S.D.'; // Replace with the actual name
+const name = 'Sarathchandra H.M.S.D.'; 
   const department = 'Agricultural Department'; 
   const no = 'IT21213458';
 
@@ -398,14 +213,12 @@ const name = 'Sarathchandra H.M.S.D.'; // Replace with the actual name
   doc.text(`${no}`, 20, doc.internal.pageSize.getHeight() - 40);
   doc.text(`${department}`, 20, doc.internal.pageSize.getHeight() - 30);
 
-  // Get the current date
   const currentDate = new Date();
   const formattedDate = currentDate.toLocaleDateString(); 
 
   doc.text(`Date: ${formattedDate}`, 20, doc.internal.pageSize.getHeight() - 20);
 
 
-// Save the PDF with a specific name
 doc.save('row_data.pdf');
 };
 
@@ -419,14 +232,14 @@ doc.save('row_data.pdf');
       <h2 className="all-requests-heading-sachini">MY REQUESTS</h2>
       <div className="search-container-sachini">
         <p className="searchPara-sachini">Search by date</p>
-        <div className="search-bar2-sachini">    {/*if you want you can get the removed search bar's container from here by removing 2*/}
+        <div className="search-bar2-sachini">    
           <input
             type="date"
             value={searchDate}
             onChange={(e) => {
               const selectedDate = new Date(e.target.value);
               const year = selectedDate.getFullYear();
-              const month = String(selectedDate.getMonth() + 1).padStart(2, '0'); // Month is 0-based
+              const month = String(selectedDate.getMonth() + 1).padStart(2, '0'); 
               const day = String(selectedDate.getDate()).padStart(2, '0');
               setSearchDate(`${year}-${month}-${day}`);
             }}
@@ -448,8 +261,6 @@ doc.save('row_data.pdf');
         <table className="all-requests-table-sachini">
           <thead>
             <tr>
-              {/*<th>Request ID</th>*/}
-              {/*<th>NIC</th>*/}
               <th>Item Name</th>
               <th>Req Date</th>
               <th>Quantity</th>
