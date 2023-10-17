@@ -24,7 +24,7 @@ export default function AllPaddymill() {
                 });
         }
 
-        
+        //inital fetch paddymill
         getPaddymills();
 
         // Check if sidebar state is stored in local storage
