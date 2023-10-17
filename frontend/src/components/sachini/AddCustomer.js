@@ -81,7 +81,7 @@ export default function AddCustomer() {
         setIsFormSubmitDisabled(response.data.usernameExists);
         } catch (error) {
         console.error(error);
-        // Handle error if the request fails
+        
         }
     };
 
@@ -180,7 +180,7 @@ export default function AddCustomer() {
                           e.preventDefault(); 
                         }
                       }}
-                      onBlur={checkUsernameExists} // This triggers the check when the user focuses out of the input field
+                      onBlur={checkUsernameExists} 
                     />
                     {isUsernameTaken && <p className="username-taken-message">Username is already taken. Please choose another one.</p>}
                 </div>
@@ -288,17 +288,17 @@ export default function AddCustomer() {
                     required
                     placeholder="Enter City"
                     onChange={(e) => {
-                    const input = e.target.value.replace(/[^A-Za-z0-9\s]/g, ''); // Remove non-alphanumeric characters and spaces
+                    const input = e.target.value.replace(/[^A-Za-z0-9\s]/g, ''); 
                     setCity(input);
                     }}
                     onKeyPress={(e) => {
                     const charCode = e.charCode;
-                    // Allow alphanumeric characters (letters and numbers) and spaces
+                    
                     if (
-                        !(charCode >= 65 && charCode <= 90) && // Uppercase letters (A-Z)
-                        !(charCode >= 97 && charCode <= 122) && // Lowercase letters (a-z)
-                        !(charCode >= 48 && charCode <= 57) && // Numbers (0-9)
-                        charCode !== 32 // Space character
+                        !(charCode >= 65 && charCode <= 90) && 
+                        !(charCode >= 97 && charCode <= 122) && 
+                        !(charCode >= 48 && charCode <= 57) && 
+                        charCode !== 32 
                     ) {
                         e.preventDefault();
                     }
