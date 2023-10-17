@@ -39,7 +39,7 @@ export default function AddPaddymill() {
         validateNIC();
         validateContactNo();
 
-        
+        //check password match
         if (password !== cnfrmpassword) {
             alert("Passwords do not match");
             return;
