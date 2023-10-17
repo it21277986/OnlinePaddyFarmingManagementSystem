@@ -165,7 +165,7 @@ button {
 
 .flex-container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
+  flex-direction: column; 
 }
 
 
@@ -184,7 +184,7 @@ button {
 
 .registration-topic {
   font-size: 50px;
-  text-align: center; /* Align text to the left */
+  text-align: center; 
   margin-left: 60px;
   padding: 150px 0;
   line-height: 1.5;
@@ -234,17 +234,15 @@ h1 {
   font-weight: bold;
 }
 
-/* Change the color of placeholder text for all input fields */
+
 .input-group-sachini input::placeholder {
-    color: black; /* Replace YourColorHere with the color you want */
+    color: black; 
 }
 
-/* Change the color of placeholder text for the textarea */
 .input-group-sachini textarea::placeholder {
-    color: black; /* Replace YourColorHere with the color you want */
+    color: black; 
 }
 
-/* Change the color of placeholder text for the select elements */
 .input-group-sachini select::placeholder {
-    color: black; /* Replace YourColorHere with the color you want */
+    color: black; 
 }
