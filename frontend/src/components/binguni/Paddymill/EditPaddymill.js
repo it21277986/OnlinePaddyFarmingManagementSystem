@@ -4,7 +4,7 @@ import { useParams,useNavigate } from "react-router-dom"; //Import useParams to 
 
 function EditPaddymill() {
     const { id } = useParams(); //Get the ID parameter from the URL
-    const navigate = useNavigate(); //Initialize the navigate function
+    const navigate = useNavigate(); 
 
     const [ownerName, setOwnerName] = useState("");
     const [NIC, setNIC] = useState("");
