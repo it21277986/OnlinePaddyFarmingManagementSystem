@@ -27,7 +27,7 @@ function PMHome() {
     flex: 1, // Take up all available horizontal space
     display: "flex",
     justifyContent: "space-around", // Space the cards evenly
-    alignItems: "center", // Vertically center the cards
+    alignItems: "center", 
   };
 
   return (
