@@ -1,0 +1,48 @@
+.position{
+    margin-top: 120px;
+}
+
+  .cardbackground{
+    background-color: rgb(255, 255, 255);
+  }
+  th{
+    font-size: 20px;
+  }
+  .hedding {
+    font-size: 20px;
+    color: #ab8181;
+  }
+ 
+  
+
+  .right-side-pro-detail .price-pro {
+    color: #E45641;
+  }
+  
+  .right-side-pro-detail .tag-section {
+    font-size: 18px;
+    color: #5D4C46;
+  }
+  
+  .pro-box-section .pro-box img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  @media (min-width:360px) and (max-width:640px) {
+    .pro-box-section .pro-box img {
+        height: auto;
+    }
+  }
+  .bx{
+    display: inline-block;
+    width: fit-content;
+  }
+  
+  .cardimage{
+    cursor:"pointer";
+    transition :" 0.3"
+  }
+  .cardimage:hover{
+    opacity: 0.7;
+  }

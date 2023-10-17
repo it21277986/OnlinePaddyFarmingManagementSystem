@@ -1,0 +1,29 @@
+.bgimage{
+    background-image: url("../img/fertilisers.jpg");
+   
+}
+.bgclr{
+    background-color: rgb(47, 47, 29);
+}
+
+.cardbg{
+    background-color: rgb(90, 108, 56);
+    
+   
+}
+.cardbg2{
+    background-color: rgb(188, 200, 143);
+    background-image: url("../img/formula.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.sectionimage{
+   
+    background: linear-gradient(45deg, #009900, #FFFF00, #FFA500);   
+}
+.cardimgbg{
+     background-image: url("../img/formula.png");
+    
+ 
+}

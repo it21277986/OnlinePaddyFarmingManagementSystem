@@ -1,0 +1,11 @@
+.sidebarclr{
+background-color:white;
+}
+.image{
+  margin-left: 0%;
+  max-width: 200px;
+}
+.navclr {
+  background: linear-gradient(45deg, green, rgb(206, 206, 98));
+  /* other styles */
+}
