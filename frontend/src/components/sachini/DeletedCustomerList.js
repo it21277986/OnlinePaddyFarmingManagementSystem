@@ -41,43 +41,35 @@ function DeletedCustomerList() {
   const downloadDeletedCustomerList = () => {
     const doc = new jsPDF();
 
-    doc.addImage(logoImage, 'PNG', 10, 10, 40, 40); // Adjust the coordinates and dimensions as needed
+    doc.addImage(logoImage, 'PNG', 10, 10, 40, 40); 
   
-    // Calculate the X-coordinate for the site name to be positioned to the right of the logo
-    const logoWidth = 40; // Adjust the width of the logo if needed
-    const siteNameX = 10 + logoWidth + 10; // Adjust the spacing as needed
+    const logoWidth = 40; 
+    const siteNameX = 10 + logoWidth + 10; 
   
-    // Calculate the Y-coordinate for the site name to be at the same vertical position as the logo
-    const siteNameY = 10 + 40 / 2; // Assuming the logo is centered vertically
+    const siteNameY = 10 + 40 / 2; 
   
-    // Add the site name text to the PDF
-    doc.setFontSize(30); // Adjust the font size as needed
-    doc.setFont('helvetica', 'bold'); // Set the font to 'helvetica' and style to 'bold'
+    doc.setFontSize(30); 
+    doc.setFont('helvetica', 'bold'); 
     doc.text(siteName, siteNameX, siteNameY);
   
-    doc.setFontSize(20); // Reset to default font size
+    doc.setFontSize(20); 
     doc.setFont('helvetica', 'normal'); 
 
     const text = 'All Deleted Customers';
 
-  // Calculate the width of the text
   const textWidth = doc.getStringUnitWidth(text) * doc.internal.getFontSize() / doc.internal.scaleFactor;
 
-  // Calculate the X-coordinate to center the text
   const centerX = (doc.internal.pageSize.getWidth() - textWidth) / 2;
 
-  // Add the centered text to the PDF
   doc.text(text, centerX, 60);
 
-    // Define the header row with column names
     const header = ['Name', 'NIC', 'Username', 'Phone', 'Address', 'LandOwner Name', 'Size'];
 
-    // Define an empty array to hold the table data
     const data = [];
 
     // Push deleted customer data to the data array
     filteredDeletedCustomers.forEach((customer) => {
-      // Combine the address fields into one column
+      
       const address = `${customer.no}, ${customer.street}, ${customer.city}`;
       const name = `${customer.fname} ${customer.lname}`
 
@@ -86,7 +78,7 @@ function DeletedCustomerList() {
         customer.nic,
         customer.username,
         customer.phone,
-        address, // Use the combined address field
+        address, 
         customer.landOwnerName,
         customer.feildSize,
       ];
@@ -94,14 +86,13 @@ function DeletedCustomerList() {
       data.push(rowData);
     });
 
-    // Auto-generate the table based on the data
     doc.autoTable({
-      head: [header], // Add the header row only once
+      head: [header], 
       body: data,
       startY: siteNameY + 40,
     });
 
-    const name = 'Sarathchandra H.M.S.D.'; // Replace with the actual name
+    const name = 'Sarathchandra H.M.S.D.'; 
     const department = 'Agricultural Department'; 
     const no = 'IT21213458';
 
@@ -121,75 +112,6 @@ function DeletedCustomerList() {
   };
 
 
-  /*
-  // Function to download deleted customer list as PDF
-  const downloadDeletedCustomerList = () => {
-    const doc = new jsPDF();
-
-    doc.addImage(logoImage, 'PNG', 10, 10, 40, 40); // Adjust the coordinates and dimensions as needed
-  
-    // Calculate the X-coordinate for the site name to be positioned to the right of the logo
-    const logoWidth = 40; // Adjust the width of the logo if needed
-    const siteNameX = 10 + logoWidth + 10; // Adjust the spacing as needed
-  
-    // Calculate the Y-coordinate for the site name to be at the same vertical position as the logo
-    const siteNameY = 10 + 40 / 2; // Assuming the logo is centered vertically
-  
-    // Add the site name text to the PDF
-    doc.setFontSize(16); // Adjust the font size as needed
-    doc.setFont('helvetica', 'bold'); // Set the font to 'helvetica' and style to 'bold'
-    doc.text(siteName, siteNameX, siteNameY);
-  
-    doc.setFontSize(12); // Reset to default font size
-    doc.setFont('helvetica', 'normal'); 
-
-    const text = 'All Deleted Customers';
-
-  // Calculate the width of the text
-  const textWidth = doc.getStringUnitWidth(text) * doc.internal.getFontSize() / doc.internal.scaleFactor;
-
-  // Calculate the X-coordinate to center the text
-  const centerX = (doc.internal.pageSize.getWidth() - textWidth) / 2;
-
-  // Add the centered text to the PDF
-  doc.text(text, centerX, 60);
-
-    // Define the header row with column names
-    const header = ['Name', 'NIC', 'Username', 'Phone', 'Address', 'LandOwner Name', 'Size'];
-
-    // Define an empty array to hold the table data
-    const data = [];
-
-    // Push deleted customer data to the data array
-    filteredDeletedCustomers.forEach((customer) => {
-      // Combine the address fields into one column
-      const address = `${customer.no}, ${customer.street}, ${customer.city}`;
-      const name = `${customer.fname} ${customer.lname}`
-
-      const rowData = [
-        name,
-        customer.nic,
-        customer.username,
-        customer.phone,
-        address, // Use the combined address field
-        customer.landOwnerName,
-        customer.feildSize,
-      ];
-
-      data.push(rowData);
-    });
-
-    // Auto-generate the table based on the data
-    doc.autoTable({
-      head: [header], // Add the header row only once
-      body: data,
-      startY: siteNameY + 40,
-    });
-
-    // Save the PDF with a specific name
-    doc.save('deleted_customer_list.pdf');
-  };
-  */
 
   return (
     <div>
