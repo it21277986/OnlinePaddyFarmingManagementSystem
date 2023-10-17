@@ -1,0 +1,169 @@
+
+
+img{
+ max-width: 350px;
+  height: 228px;
+}
+
+#pricing-tables {
+  margin-top: 100px;
+  background: linear-gradient(45deg, #006600, #CCCC00);
+  padding: 30px 20px;
+  
+  font-family: "Lato", sans-serif;
+}
+#pricing-tables .col-md-3, #pricing-tables .col-sm-6, #pricing-tables .col-xs-12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+.pesticidebg{
+  background-image: url("../../assetsUI/img/fertilisers.jpg");
+}
+
+
+#pricing-tables .col-md-3:hover, #pricing-tables .col-sm-6:hover, #pricing-tables .col-xs-12:hover {
+  box-shadow: 0px 11px 30px 0px rgba(0, 0, 0, 0.75);
+  z-index: 2;
+  transform: scale(1.06);
+  border: 0;
+  transition: 0.5s all;
+  border: none;
+}
+
+.single-table {
+  background: #eef0ea;
+  transition: all 0.2s linear;
+  z-index: 1; 
+  /* Bubble Float Right */
+  margin: 20px;
+}
+.single-table .plan-header {
+  background: #d3ecc6;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 2px 0;
+}
+.single-table .plan-header h3 {
+  margin: 0;
+  padding: 20px 0 5px 0;
+  text-transform: uppercase;
+}
+.single-table .plan-price {
+  display: inline-block;
+  color: #62924a;
+  margin: 0 0 10px 0;
+  font-size: 25px;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 50%;
+  padding: 33px 15px;
+}
+.single-table .plan-price span {
+  font-size: 14px;
+  font-weight: normal;
+}
+.single-table ul {
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+}
+.single-table ul li {
+  padding: 8px 0;
+  margin: 0 20px;
+  border-bottom: 1px solid white;
+  font-size: 15px;
+}
+.single-table .plan-submit {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0px 0 20px 0;
+  padding: 10px 40px;
+  border: 1px solid #62924a;
+  color: #102307;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  transition: all 0.25s linear;
+}
+.single-table .plan-submit:hover {
+  background: #62924a;
+  color: #FFF;
+  transition: all 0.25s linear;
+}
+.single-table .hvr-bubble-float-right {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.single-table .hvr-bubble-float-right:before {
+  position: absolute;
+  z-index: -1;
+  top: calc(50% - 10px);
+  right: 0;
+  content: "";
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.single-table .hvr-bubble-float-right:hover,
+.single-table .hvr-bubble-float-right:focus,
+.single-table .hvr-bubble-float-right:active {
+  transform: translateX(-10px);
+}
+.single-table .hvr-bubble-float-right:hover:before,
+.single-table .hvr-bubble-float-right:focus:before,
+.single-table .hvr-bubble-float-right:active:before {
+  transform: translateX(10px);
+  border-color: transparent transparent transparent #62924a;
+}
+
+.home-section nav{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background: #cab2b2;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 240px);
+  left: 240px;
+  z-index: 100;
+  padding: 0 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 1240px) {
+  .sidebar{
+    width: 60px;
+  }
+  .sidebar.active{
+    width: 220px;
+  }
+  .home-section{
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .sidebar.active ~ .home-section{
+    /* width: calc(100% - 220px); */
+    overflow: hidden;
+    left: 220px;
+  }
+  .home-section nav{
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .sidebar.active ~ .home-section nav{
+    width: calc(100% - 220px);
+    left: 220px;
+  }
+}

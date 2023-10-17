@@ -1,0 +1,159 @@
+/* External CSS file (e.g., styles.css) */
+
+/* Style the customer list table container */
+.customer-list-table-container-sachini {
+    margin: 20px;
+    border-collapse: collapse; 
+    width: 90%;
+    margin-left: 40px !important;
+    font-size: 17px;
+  }
+  
+  /* Style the customer list table headers */
+  .customer-list-table-sachini th {
+    background-color: #97d36f;
+    border: 1px solid #ddd;
+  padding: 8px; 
+  text-align: left;
+  }
+  
+  /* Style the customer list table rows */
+  .customer-list-table-sachini tbody tr:nth-child(even) {
+    background-color: #e0e0e0;
+  }
+
+  .customer-list-table-sachini tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style customer list table cells (td) */
+  .customer-list-table-sachini td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  /* Style the customer list Download button */
+  .customer-list-download-button {
+    background-color: #349244;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Style customer list table headings (th) */
+  .customer-list-table-sachini th {
+    font-weight: bold;
+  }
+  
+  .customer-list-table-sachini tbody tr:hover {
+    background-color: #ddd; /
+  }
+  
+  /* Style customer list table cells (td) on hover */
+  .customer-list-table-sachini tbody td:hover {
+    background-color: #f5f5f5; 
+    color: #333; 
+  }
+
+  .download-button-sachini {
+    padding: 8px 16px; 
+    background-color: #2f853d; 
+    color: #fff; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 10px; 
+    margin-left: 60px;
+    margin-bottom: 80px;
+    margin-top: 50px !important;
+  }
+  
+  /* Style the download button on hover */
+  .download-button-sachini:hover {
+    background-color: #61b461; 
+  }
+
+  .customer-list-table-container-sachini .download-button {
+    display: inline-block; 
+    margin-top: 10px; 
+    margin-left: 60px !important;
+  }
+
+  .highlighted-row-sachini {
+    background-color: red; 
+    color: rgb(255, 10, 10); 
+  }
+  
+  /* CustomerList.css */
+.search-bar-sachini {
+    width: 20%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: border-color 0.3s ease;
+    background-color: #cdf0d3;
+  }
+  
+  .search-bar-sachini:focus {
+    outline: none;
+    border-color: #007BFF; 
+    box-shadow: 0 0 5px #007BFF; 
+  }
+
+  .search-bar-sachini:hover {
+    border-color: #007BFF; 
+  }
+  
+
+
+  /*HRHome style sheet*/
+  /* CustomerList.css */
+.custom-button-sachini {
+    background-color: #4e9e4e; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 20px;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    display: block; 
+    margin: 0 auto; 
+    transition: background-color 0.3s ease; 
+  
+    /* Add a hover effect */
+    &:hover {
+      background-color: #65be74; 
+    }
+  }
+  
+  /* styles/CustomerList.css */
+
+/* Style for the delete button */
+.dltbtn-sachini {
+    background-color: #fc4f28; 
+    color: white; 
+    border: none; 
+    padding: 3px 5px; 
+    cursor: pointer; 
+    height: 25px;
+}
+  
+  /* Style for the delete button on hover */
+  .dltbtn-sachini:hover {
+    background-color: #e74c3c; 
+  }
+  
+  .update-btn-sachini{
+    background-color: #179e17; 
+    color: white; 
+    border: none; 
+    padding: 3px 5px; 
+    cursor: pointer; 
+    height: 25px;
+  }

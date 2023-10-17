@@ -1,0 +1,248 @@
+.container-sachini {
+    background-color: #ffffff;
+    max-width: 2000px !important;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin-right: 60px;
+    background-color: rgba(193, 240, 189, 0.9) !important;
+    color: black;
+    height: 920px;
+}
+
+/* General Input Styles */
+.input-group-sachini input[type="text"],
+.input-group-sachini input[type="date"],
+.input-group-sachini input[type="tel"],
+.input-group-sachini textarea,
+.input-group-sachini select {
+    width: 100%;
+    padding: 5px;
+    margin: 1px 0; 
+    border: 0px solid #cccccc;
+    border-radius: 5px;
+    font-size: 21px;
+    color: #000000;
+    margin-top: 0 !important;
+}
+
+/* Password Input Styles */
+.input-group-sachini.input-password-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0; 
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #333333;
+}
+
+/* Address Input Group Styles */
+.input-group-sachini.address-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 5px 0; 
+    color: black;
+}
+
+.input-group-sachini.address-group input,
+.input-group-sachini.address-group select {
+    flex: 1;
+    color: black;
+}
+
+/* Division Code and Block Number on Same Line */
+.input-group-sachini.divisional-code-group {
+    display: flex;
+    align-items: center;
+    margin: 5px 0; 
+}
+
+.input-group-sachini.divisional-code-group input[type="text"],
+.input-group-sachini.divisional-code-group select {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Select Province and Select District on Same Line */
+.input-group-sachini.province-district-group {
+    display: flex;
+    gap: 10px;
+    margin: 5px 0; 
+}
+
+.input-group-sachini.province-district-group select {
+    flex: 1;
+}
+
+/* Remaining Styles (unchanged) */
+h1 {
+    color: #333333;
+    padding-bottom: 0px;
+}
+
+.section-sachini {
+    border-bottom: 1px solid #a3a1a1;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+h4 {
+    color: #0a1307;
+    padding-top: 0px;
+}
+
+.input-group-sachini {
+    margin-bottom: 4px; 
+}
+
+.label {
+    color: #020000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group-sachini label {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.input-group-sachini input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+
+button {
+  padding: 10px 20px;
+  background-color: #309011;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 auto; 
+  
+}
+
+.password-fields-sachini {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    color: black !important;
+}
+
+.password-fields-sachini input[type="password"] {
+    width: 150px;
+    color: black;
+}
+
+.password-fields-sachini label[for="confirmPassword"] {
+    margin-left: 20px;
+}
+
+.input-group-sachini label[for="province"],
+.input-group-sachini #province {
+    display: block;
+    margin-top: 10px;
+}
+
+.password-strength-sachini {
+    color: red;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+/* registration.css */
+
+.flex-container {
+  display: flex;
+  flex-direction: column; 
+}
+
+
+.registration-topic-container {
+  width: 1000px !important;
+  height: 1068px;
+  margin-top: 20px;
+  margin-left: 120px;
+  padding: 30px;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+  background-color: rgba(205, 208, 203, 0.7) !important;
+  position: relative;
+}
+
+.registration-topic {
+  font-size: 50px;
+  text-align: center; 
+  margin-left: 60px;
+  padding: 150px 0;
+  line-height: 1.5;
+  position: relative;
+  color: #ffffff;
+}
+
+.special-text {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+
+
+
+.add-customer-container-sachini {
+  position: relative;
+}
+
+.add-customer-container-sachini::before {
+  content: "";
+  background-image: url('../images/regpic3.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: blur(0px); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 36px; 
+  color: #000000; 
+  margin: 20px 0; 
+  line-height: 1.5; 
+  word-spacing: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: "Bowlby One";
+  font-weight: bold;
+}
+
+
+.input-group-sachini input::placeholder {
+    color: black; 
+}
+
+.input-group-sachini textarea::placeholder {
+    color: black; 
+}
+
+.input-group-sachini select::placeholder {
+    color: black; 
+}

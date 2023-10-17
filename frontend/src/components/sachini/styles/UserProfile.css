@@ -1,0 +1,168 @@
+/* UserProfile.css */
+.background-container2-sachini {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  width: auto;
+  background-image: url('../images/profileBG1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  position: relative;
+}
+
+.profile-container-sachini {
+    background-color: #dbf0dd;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    margin: 20px auto 10px;
+    width: 700px; 
+    text-align: center; 
+    margin-bottom: 20px !important;
+    font-size: 20px;
+  }
+  
+  h2 {
+    font-size: 32px; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 20px;
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .image-upload-container-sachini {
+    margin-bottom: 20px;
+  }
+  
+  .profile-details-sachini {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .profile-picture-sachini {
+    width: 200px;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 0px; 
+    box-shadow: 0 0 0px rgba(48, 44, 44, 0);
+    margin-bottom: 0;
+    background-color: #b6bbb6;
+  }
+  
+  .image-upload-label-sachini {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  
+  .image-upload-sachini {
+    display: none;
+  }
+  
+  .profile-info-sachini table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 30px 0;
+    text-align: left;
+  }
+  
+  .profile-info-sachini td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .title-sachini {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .centered-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+  }
+
+  .button-container-sachini {
+    display: flex;
+    gap: 100px; 
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+
+  .paragraph-container-sachini {
+    display: flex;
+    justify-content: space-between; 
+    background-color: rgba(255, 255, 255, 0.6); 
+    padding: 20px; 
+    color: black;
+    font-size: 21px;
+  }
+  
+  .left-aligned-paragraph-sachini {
+    flex: 1; 
+    text-align: left;
+    text-align: justify;
+    margin-right: 80px;
+    margin-left: 80px;
+  }
+  
+  .right-aligned-paragraph-sachini {
+    flex: 1; 
+    text-align: right;
+    text-align: justify;
+    margin-right: 80px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-weight: bold; 
+  }
+
+  /* UserProfile.css */
+
+.button-container-req-sachini {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; 
+  margin-bottom: 50px;
+}
+
+.all-requests-button-sachini {
+  /* Add your button styles here */
+  padding: 5px 20px;
+  background-color: #42912a;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 5px !important;
+  height: 35px;
+}
+
+.all-requests-button-sachini:hover {
+  background-color: #155022; 
+}
+
+/* UserProfile.css */
+
+.custom-image-sachini {
+  width: 62px; 
+  height: 62px; 
+  margin-top: 35px !important;
+}
+
+
+.who-we-are-container-sachini {
+  background-color: rgba(255, 255, 255, 0.4); 
+  padding: 20px; 
+}
