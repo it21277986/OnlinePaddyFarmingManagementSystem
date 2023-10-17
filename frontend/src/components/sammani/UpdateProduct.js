@@ -97,8 +97,7 @@ function UpdateProduct() {
 
 
 
-
-
+//setting image
 
   const [product, setProduct] = useState({});
   const [selectedImage, setSelectedImage] = useState(null);
