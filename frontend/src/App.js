@@ -23,6 +23,28 @@ function App() {
          <Routes>
           <Route path='/' element={<Home/>} />
           </Routes>
+           {/* Sammani */}
+        <Routes>
+        <Route path="/pesticidePage" element={<CropProtection />} />
+          <Route path="/pesticides" element={<ProductDisplay />} />
+          <Route path="/crop-Protection" element={<CropProtection/>}/>
+          <Route
+            path="/pesticide/:productName/:productId"
+            element={<ViewProduct />}
+          />
+           <Route path="/payment-Details" element={<PaymentUI/>}/>
+           <Route path="/pesticideOfficer" element={<HeaderOfficer/>}/>
+           
+           //officer side 
+
+           <Route path='/products' element={<Product/>}/>
+           <Route path='/pesticideDashboard' element={<PesticideDashBoard/>}/>
+           <Route path='/stock' element={<Stock/>}/>
+           <Route path='/PesticideRequests' element={<ProductRequest/>}/>
+           <Route path='/pesticidePayment' element={<PesticidePayment/>}/>
+           <Route path='/updateproduct/:pesticideId' element={<UpdateProduct/>}/>
+
+        </Routes>
       
     </div>
     </Router>
