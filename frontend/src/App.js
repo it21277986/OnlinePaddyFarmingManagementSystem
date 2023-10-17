@@ -17,9 +17,11 @@ import UpdateProduct from "./components/sammani/UpdateProduct";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div>
       
     </div>
+    </Router>
   );
 }
 
