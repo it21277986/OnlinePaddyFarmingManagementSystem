@@ -12,10 +12,7 @@ import {
     Label,Input,Modal
   } from "reactstrap";
 
-  
-  // core components
 
- 
   const Stock = () => {
     const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
