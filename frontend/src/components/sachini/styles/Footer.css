@@ -1,0 +1,73 @@
+
+.footer {
+    background-color: #B3DDC4; 
+    height: 235px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    text-align: left; 
+  }
+  
+  .footer-content {
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Add this CSS */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px !important;
+}
+
+  
+  .contact-us {
+    text-align: center;
+    color: black;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1px 20px;
+  }
+  
+  .small-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .right-image-style {
+    height: 170px;
+    width: auto;
+    margin-left: 130px !important;
+    margin-top: 30px !important;
+  }
+
+  
+
+
+  
+
+
+
+
+
+
+
+
