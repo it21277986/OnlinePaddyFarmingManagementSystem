@@ -52,7 +52,7 @@ export default function AllCustomers(props) {
   const [currentSlide, setCurrentSlide] = useState(0); 
   const totalSlides = 3; 
 
-  // Function to handle slide change
+  
   const handleSlideChange = (index) => {
     setCurrentSlide(index);
   };
@@ -86,32 +86,8 @@ export default function AllCustomers(props) {
         )}
       </div>
 
-            {/* Slideshow */}
-            {/*
-        <div className="slideshow-container">
-          <Carousel
-            showArrows={true}
-            autoPlay={true}
-            interval={3000} // Adjust the time interval as needed
-            infiniteLoop={true}
-            selectedItem={currentSlide}
-            onChange={handleSlideChange}
-          >
-            {slideImages.map((image, index) => (
-              <div key={index}>
-                <img
-                  src={image}
-                  alt={`Slide ${index + 1}`}
-                  onLoad={() => console.log(`Image ${index + 1} loaded successfully`)}
-                />
-              </div>
-            ))}
-          </Carousel>
+            
 
-        </div>
-*/}
-
-            {/* Replace the slideshow with an image */}
           <div className="slideshow-container-sachini">
             <img
               src={slideImg1}
@@ -158,7 +134,7 @@ export default function AllCustomers(props) {
             </div>
             {/*
             <img
-                src={home} // Replace with your image URL
+                src={home} 
                 alt="Homepage"
                 className="homepage-image"
             />
