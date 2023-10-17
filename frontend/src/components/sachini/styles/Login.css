@@ -1,0 +1,140 @@
+
+.login-container-sachini {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(205, 208, 203, 0.7) !important;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; 
+    margin-bottom: 20px;
+    background-color: #CDD0CB; 
+    border-radius: 40px;
+    height: 390px !important;
+    width: 700px !important;
+  }
+
+  
+  /* Add the background image to the background-container */
+  .background-container-sachini {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    position: relative;
+  }
+
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.0001); 
+  }
+  
+
+  .login-bg-sachini {
+    background-image: url('../images/background.jpg'); 
+    width: cover !important;;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin-top: 0px 0px 0px 0px !;
+    
+  }
+  
+  .login-page-sachini {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .center-vertically-sachini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+  }
+  
+ 
+  .form-group-sachini {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 20px;
+  }
+  
+
+  .form-group-sachini label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    font-size: 19px;
+  }
+  
+  
+  .form-group-sachini input[type="text"],
+  .form-group-sachini input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+  }
+  
+  
+  .form-group-sachini button[type="submit"] {
+    background-color: #309011;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
+    width: 150px;
+    font-size: 22px;
+    height: 50px;
+  }
+  
+  .form-group-sachini button[type="submit"]:hover {
+    background-color: #309011;
+  }
+  
+  
+  .success-message-sachini {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+ 
+  .error-message-sachini {
+    color: red;
+    margin-top: 10px;
+  }
+  
+
+  .signup-message-sachini {
+    margin: 0;
+    text-align: center;
+    gap: 8px;
+    font-size: 20px;
+  }
+  
+  .signup-link-sachini {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 20px;
+  }
