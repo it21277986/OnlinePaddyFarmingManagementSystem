@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "./CropProtectionHeader.js"
 import axios from "axios";
+import CropProtectionHeader from "./CropProtectionHeader.js";
 
  function Cart(){
     
 
     return(
         <>
-        <Header/>
+        <CropProtectionHeader/>
         <header className="header-2 ">
 <div className="page-header min-vh-75 relative pesticidebg" >
 <span className="mask bg-gradient bgclr opacity-4"></span>

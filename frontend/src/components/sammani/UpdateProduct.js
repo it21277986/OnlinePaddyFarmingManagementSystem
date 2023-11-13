@@ -97,8 +97,7 @@ function UpdateProduct() {
 
 
 
-
-
+//setting image
 
   const [product, setProduct] = useState({});
   const [selectedImage, setSelectedImage] = useState(null);
@@ -132,7 +131,7 @@ function UpdateProduct() {
     formData.append("price", e.target.price.value);
 
   
-    // Append the new image if it's selected
+    // append the new image
     
     axios
       .put(`http://localhost:8070/pesticides/updateAll/${pesticideId}`, formData, {
@@ -305,6 +304,7 @@ function UpdateProduct() {
  <th style={{ fontSize: "18px",color:"black" , border: "1px solid #dddddd", textAlign: "left", padding: "8px" }}>Unit Price</th>
  <td style={{  fontSize: "18px",color:"black" , border: "1px solid #dddddd", textAlign: "left", padding: "8px"  }}><Input style={{color:"black",width:"250px"}} name="price" defaultValue={product.price} type="text"></Input></td>
 </tr>
+
 <br></br>
 <tr>
 
