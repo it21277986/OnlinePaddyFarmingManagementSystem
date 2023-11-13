@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.theme-text{
+    color: rgb(255, 255, 0);
+}
+.button-text{
+    color: rgb(255, 255, 255);
+}
+.navbar-brand{
+    color: rgb(26, 26, 2) !important;
+}
+.act{
+    color: lightgreen !important;
+    border-bottom: 3px solid lightgreen;
+}
+.navbar ul li a:hover {
+    color: rgb(76, 83, 76) !important;
+    border-bottom: 3px solid lightgreen;
+}
+.headerlth{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./headerBackground.jpg"); 
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.wavelth{
+    position: absolute;
+    bottom: 0px;
+}
+.middlelth{
+    height: 40vh;
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 200px;
+}
+.middlelth h1{
+    font-size: 60px;
+}
+
+.card1lth {
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./card1background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.card2lth {
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./card2background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.card3lth {
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./card3background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.card-bodylth {
+    padding: 20px;
+}
+
+.card-titlelth {
+    font-size: 1.5rem; 
+    color: rgb(255, 255, 255);
+}
+
+.card1lth plth {
+    font-size: 1rem;
+    color: #bcbcbc; 
+}
+.card2lth plth {
+    font-size: 1rem;
+    color: #bcbcbc; 
+}
+.card3lth plth {
+    font-size: 1rem;
+    color: #bcbcbc; 
+}
