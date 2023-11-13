@@ -5,6 +5,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Lakmal
 import Home from './components/NavBar/Home';
 // import Navbar from './components/NavBar/Navbar';
+
+// import AddSociety from './components/Society/AddSociety';
+// import AllSociety from './components/Society/AllSociety';
+// import EditSociety from './components/Society/EditSociety';
+// import DeleteSociety from './components/Society/DeleteSociety';
+// import RaiseNewTicket from './components/Ticket/raiseNewTicket';
+// import SSDashboard from './components/SystemDashboard/SSDashboard';
+// import AllRaisedTicket from './components/Ticket/AllRaisedTicket';
+// import DeleteTicket from './components/Ticket/DeleteTicket';
+// import NewBreakdown from './components/Breakdown/NewBreakdown';
+// import AllBreakdown from './components/Breakdown/AllBreakdown';
+import Footer from './components/Footer/Footer';
+
 import AddSociety from './components/Society/AddSociety';
 import AllSociety from './components/Society/AllSociety';
 import EditSociety from './components/Society/EditSociety';
@@ -41,6 +54,8 @@ import AddTender from "./components/binguni/Tender/AddTender.js";
 import AllTender from "./components/binguni/Tender/AllTender.js";
 import AddPrice from "./components/binguni/FinalPrice/AddPrice.js";
 import Track from "./components/binguni/Track/Track.js";
+
+import VehicleTracking from "./components/binguni/Track/VehicalTracking";
 import VehicleTracking from "./components/binguni/Track/VehicleTracking.js";
 
 //Kalpana
@@ -115,6 +130,13 @@ function App() {
       {/* Home */}
         <Routes>
           <Route path='/' element={<Home/>} />
+
+          </Routes>
+
+          {/* Lakmal */}
+        <Routes>
+          {/* <Route path='/ssdashboard' element={<SSDashboard/>} /> */}
+
         </Routes>
 
         {/* Lakmal */}
@@ -128,6 +150,7 @@ function App() {
           <Route path='/Society' element={<AllSociety/>} />
           <Route path='/editSociety/:id' element={<EditSociety />} />
           <Route path='/addBreakdown' element={<NewBreakdown/>} />
+          <Route path='/Breakdown' element={<AllBreakdown/>} /> 
           <Route path='/Breakdown' element={<AllBreakdown/>} /> 
         </Routes>
 
@@ -146,6 +169,7 @@ function App() {
           <Route path="/editpm/:id" element={<EditPaddymill/>}/>
         </Routes>
 
+           {/* Sammani */}
         {/* Sachini */}
         <Routes>
           <Route path="/AllCus" element={<AllCustomers />} />
