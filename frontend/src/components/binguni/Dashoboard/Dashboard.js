@@ -25,6 +25,7 @@ export default function Dashboard() {
         });
 
     //Add side toggle bar eventlistener
+	//Add side bar
     const menuBar = document.querySelector('#content nav .bx.bx-menu');
     menuBar.addEventListener('click', function () {
       const newSidebarState = !sidebarCollapsed;
