@@ -18,7 +18,7 @@ function PMHome() {
 
   const contentStyle = {
     flex: 1, // Take up all available horizontal space
-    padding: "20px", // Add some padding to the content
+    padding: "20px",
     color: "#fff",
     textAlign: "center",
   };
